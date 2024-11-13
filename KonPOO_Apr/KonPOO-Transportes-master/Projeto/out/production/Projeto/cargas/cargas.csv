@@ -1,4 +1,0 @@
-codigo;peso;tempoMaximo;valorDeclarado;destino(cod);origem(cod);cliente(cod);status(id);tipoCarga(nro);caminhaoDesignado(cod)
-1;35;30;150000.0;2;1;3011;1;1;null
-2;90;60;1000000.0;4;3;1;1;2;null
-3;500;10;1500.0;9;1;1209;1;1;null
