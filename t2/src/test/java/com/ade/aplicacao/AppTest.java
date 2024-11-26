@@ -2,6 +2,7 @@ package com.ade.aplicacao;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -21,6 +22,15 @@ import java.util.stream.StreamSupport;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppTest {
+
+    private Controle controle;
+
+    // Combina as inicializações em um único método
+    @BeforeEach
+    void setUp() {
+        controle = new Controle(); // Inicializa o controle
+        controle.resetData(); // Reseta os dados para evitar interferências entre testes
+    }
 
     private List<String> loadCsv(Path path) throws Exception {
         try (Reader reader = Files.newBufferedReader(path)) {
@@ -88,7 +98,6 @@ public class AppTest {
 
         try {
             // Executa a aplicação
-
             App app = new App();
             app.run();
 
