@@ -91,8 +91,9 @@ public class controleTest {
         assertTrue(controle.verificaAlgumDestinoJaCadastrado());
     }
 
-    @Test
-    void testLocalPorCodigoNaoNull1() {
+    @ParameterizedTest
+    @CsvSource({ "0, 1", "1, 2", "2, 3", "3, 4", "4, 5" })
+    void testLocalPorCodigo(int index, int codigo) {
 
         controle.novoLocal("cidade1", "nome1", 0, 0); // Código 1
         controle.novoLocal("cidade2", "nome2", 1, 1); // Código 2
@@ -102,11 +103,7 @@ public class controleTest {
 
         List<Local> locais = controle.getLocais();
 
-        assertEquals(locais.get(0), controle.localPorCodigo(1));
-        assertEquals(locais.get(1), controle.localPorCodigo(2));
-        assertEquals(locais.get(2), controle.localPorCodigo(3));
-        assertEquals(locais.get(3), controle.localPorCodigo(4));
-        assertEquals(locais.get(4), controle.localPorCodigo(5));
+        assertEquals(locais.get(index), controle.localPorCodigo(codigo));
         assertEquals(null, controle.localPorCodigo(6));
     }
 
