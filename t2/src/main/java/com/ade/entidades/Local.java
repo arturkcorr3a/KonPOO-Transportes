@@ -55,4 +55,8 @@ public class Local {
 		codigoAUX = 1;
 	}
 
+	public static int getCodigoAUX() {
+		return codigoAUX;
+	}
+
 }

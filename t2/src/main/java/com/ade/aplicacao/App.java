@@ -12,6 +12,7 @@ public class App {
 
     public void run() {
         int menu;
+        controle.inicializaDados();
         do {
             System.out.println("MENU" +
 

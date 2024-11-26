@@ -23,7 +23,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import com.ade.entidades.Local;
 
-public class controleTest {
+public class ControleTest {
 
     // Testes de integração para métodos envolvendo criação e consulta de Locais na
     // classe Controle

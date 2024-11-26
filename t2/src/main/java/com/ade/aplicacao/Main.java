@@ -5,8 +5,8 @@ public class Main {
         App app = new App();
 
         Controle controle = new Controle();
-        System.out.println(controle.inicializaDados());
-        System.out.println(controle.salvaDados());
+        // System.out.println(controle.inicializaDados());
+        // System.out.println(controle.salvaDados());
 
         app.run();
 
