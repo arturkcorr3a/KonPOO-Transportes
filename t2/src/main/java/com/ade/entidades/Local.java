@@ -51,4 +51,8 @@ public class Local {
 		return cidade + ";" + codigo + ";" + nome + ";" + latitude + ";" + longitude;
 	}
 
+	public static void resetCodigo() {
+		codigoAUX = 1;
+	}
+
 }

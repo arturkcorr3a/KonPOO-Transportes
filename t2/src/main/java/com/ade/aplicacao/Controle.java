@@ -662,7 +662,8 @@ public class Controle {
 	}
 
 	public String salvaLocais() {
-		Path caminho = Paths.get("src" + File.separator + "main" + File.separator + "java" + File.separator + "com"	+ File.separator + "ade" + File.separator + "entidades" + File.separator + "locais.csv");
+		Path caminho = Paths.get("src" + File.separator + "main" + File.separator + "java" + File.separator + "com"
+				+ File.separator + "ade" + File.separator + "entidades" + File.separator + "locais.csv");
 
 		try (BufferedWriter bw = Files.newBufferedWriter(caminho, Charset.defaultCharset(),
 				StandardOpenOption.TRUNCATE_EXISTING);
@@ -724,4 +725,14 @@ public class Controle {
 		return locais;
 	}
 
+	public void resetData() {
+		cargas.clear();
+		cargasPendentes.clear();
+		clientes.clear();
+		frota.clear();
+		locais.clear();
+		tipos.clear();
+		salvaDados();
+		Local.resetCodigo();
+	}
 }

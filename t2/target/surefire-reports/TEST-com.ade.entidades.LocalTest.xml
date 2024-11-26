@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.ade.aplicacao.controleTest" time="0.686" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.ade.entidades.LocalTest" time="0.221" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,18 +58,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testAlgumDestinoCadastrado" classname="com.ade.aplicacao.controleTest" time="0.09"/>
-  <testcase name="testSalvaLocaisVazio" classname="com.ade.aplicacao.controleTest" time="0.014"/>
-  <testcase name="testOrdenaLocais" classname="com.ade.aplicacao.controleTest" time="0.016"/>
-  <testcase name="testVerificaCodigoUnicoLocal(int, boolean)[1]" classname="com.ade.aplicacao.controleTest" time="0.075"/>
-  <testcase name="testVerificaCodigoUnicoLocal(int, boolean)[2]" classname="com.ade.aplicacao.controleTest" time="0.011"/>
-  <testcase name="testVerificaCodigoUnicoLocal(int, boolean)[3]" classname="com.ade.aplicacao.controleTest" time="0.01"/>
-  <testcase name="testVerificaCodigoUnicoLocal(int, boolean)[4]" classname="com.ade.aplicacao.controleTest" time="0.037"/>
-  <testcase name="testVerificaCodigoUnicoLocal(int, boolean)[5]" classname="com.ade.aplicacao.controleTest" time="0.009"/>
-  <testcase name="testNovoLocal" classname="com.ade.aplicacao.controleTest" time="0.017"/>
-  <testcase name="testInicializaLocaisVazio" classname="com.ade.aplicacao.controleTest" time="0.02"/>
-  <testcase name="testInicializaLocais" classname="com.ade.aplicacao.controleTest" time="0.023"/>
-  <testcase name="testSalvaLocais" classname="com.ade.aplicacao.controleTest" time="0.062"/>
-  <testcase name="testCodigoUnicoVazio" classname="com.ade.aplicacao.controleTest" time="0.021"/>
-  <testcase name="testLocalPorCodigoNaoNull1" classname="com.ade.aplicacao.controleTest" time="0.016"/>
+  <testcase name="testGetters(String, String, int, int)[1]" classname="com.ade.entidades.LocalTest" time="0.053"/>
+  <testcase name="testGetters(String, String, int, int)[2]" classname="com.ade.entidades.LocalTest" time="0.003"/>
+  <testcase name="testGetters(String, String, int, int)[3]" classname="com.ade.entidades.LocalTest" time="0.003"/>
+  <testcase name="testGetters(String, String, int, int)[4]" classname="com.ade.entidades.LocalTest" time="0.003"/>
+  <testcase name="testCsvString" classname="com.ade.entidades.LocalTest" time="0.003"/>
+  <testcase name="testDistancia(int, int, int, int, double)[1]" classname="com.ade.entidades.LocalTest" time="0.027"/>
+  <testcase name="testDistancia(int, int, int, int, double)[2]" classname="com.ade.entidades.LocalTest" time="0.004"/>
+  <testcase name="testDistancia(int, int, int, int, double)[3]" classname="com.ade.entidades.LocalTest" time="0.004"/>
+  <testcase name="testDistancia(int, int, int, int, double)[4]" classname="com.ade.entidades.LocalTest" time="0.002"/>
 </testsuite>

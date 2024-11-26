@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.ade.aplicacao.controleTest
+Test set: com.ade.entidades.LocalTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.686 s -- in com.ade.aplicacao.controleTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 s -- in com.ade.entidades.LocalTest
