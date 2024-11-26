@@ -9,7 +9,7 @@ public class Caminhao {
 	private final double velocidade;
 	private double custoPorKm;
 	private final int capacidadePeso;
-	private static double valorGasolina = 5.32;
+	private static double valorGasolina = 5.00;
 	private Status status;
 
 	public Caminhao(String nome, double autonomia, double velocidade, int capacidadePeso) {

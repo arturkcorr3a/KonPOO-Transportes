@@ -1,2 +1,2 @@
 codigo;peso;tempoMaximo;valorDeclarado;destino(cod);origem(cod);cliente(cod);status(id);tipoCarga(nro);caminhaoDesignado(cod)
-1;1;2;500.0;1;2;1;2;1;null
+1;1;2;500.0;1;2;1;1;1;null

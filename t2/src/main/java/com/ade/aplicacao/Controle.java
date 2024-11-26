@@ -87,7 +87,7 @@ public class Controle {
 				inicializaFila() + "\n";
 	}
 
-	private String inicializaLocais() {
+	public String inicializaLocais() {
 		Path locaisARQ = Paths.get("src" + File.separator + "main" + File.separator + "java" + File.separator + "com"
 				+ File.separator + "ade" + File.separator + "entidades" + File.separator + "locais.csv");
 
@@ -720,4 +720,9 @@ public class Controle {
 			c.atualizaCustoPorKM();
 		}
 	}
+
+	public List<Local> getLocais() {
+		return locais;
+	}
+
 }

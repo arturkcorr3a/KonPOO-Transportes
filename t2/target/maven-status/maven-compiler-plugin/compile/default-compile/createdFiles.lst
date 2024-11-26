@@ -1,0 +1,17 @@
+com\ade\aplicacao\Controle$TiposComparator.class
+com\ade\cargas\Duravel.class
+com\ade\aplicacao\Controle$CargasComparator.class
+com\ade\cargas\Carga.class
+com\ade\aplicacao\Main.class
+com\ade\entidades\Local.class
+com\ade\aplicacao\App.class
+com\ade\entidades\Cliente.class
+com\ade\aplicacao\Controle$ClienteComparator.class
+com\ade\entidades\Caminhao$Status.class
+com\ade\cargas\Carga$Status.class
+com\ade\cargas\Perecivel.class
+com\ade\cargas\TipoCarga.class
+com\ade\aplicacao\Controle.class
+com\ade\aplicacao\Controle$LocalComparator.class
+com\ade\aplicacao\Controle$CaminhaoComparator.class
+com\ade\entidades\Caminhao.class
