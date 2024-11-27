@@ -25,13 +25,13 @@ public class AppTest {
 
     private Controle controle;
 
-    // Combina as inicializações em um único método
     @BeforeEach
     void setUp() {
-        controle = new Controle(); // Inicializa o controle
-        controle.resetData(); // Reseta os dados para evitar interferências entre testes
+        controle = new Controle();
+        controle.resetData();
     }
 
+    // Carrega um csv em uma lista de strings
     private List<String> loadCsv(Path path) throws Exception {
         try (Reader reader = Files.newBufferedReader(path)) {
             Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(reader);
@@ -41,15 +41,16 @@ public class AppTest {
         }
     }
 
+    // Faz uma cópia de um arquivo Csv
     private void copyCsv(Path source, Path target) throws Exception {
         Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
     }
 
+    // Definição de um assert que analisa a diferença entre dois arquivos csv
     private void assertCsvDelta(Path csv1, Path csv2, String expectedDelta) throws Exception {
         List<String> file1Lines = Files.readAllLines(csv1);
         List<String> file2Lines = Files.readAllLines(csv2);
 
-        // Calcula o delta
         StringBuilder actualDelta = new StringBuilder();
         int maxLines = Math.max(file1Lines.size(), file2Lines.size());
 
@@ -62,7 +63,6 @@ public class AppTest {
             }
         }
 
-        // Compara o delta gerado com o delta esperado
         String deltaResult = actualDelta.toString().trim();
         if (!deltaResult.equals(expectedDelta.trim())) {
             throw new AssertionError(
@@ -78,30 +78,23 @@ public class AppTest {
     public void testAdicionarNovoLocalESair(String cidade, String nome, String latitude, String longitude)
             throws Exception {
 
-        // Caminhos dos arquivos
         Path originalCsv = Path.of("src/main/java/com/ade/entidades/locais.csv");
         Path copiaCsv = Path.of("src/test/java/com/ade/aplicacao/copiaLocais.csv");
 
-        // Copia o arquivo original
         copyCsv(originalCsv, copiaCsv);
 
-        // Simula entradas do usuário
         String simulatedInput = String.format("1\n%s\n%s\n%s\n%s\n0\n", cidade, nome, latitude, longitude);
 
-        // Redireciona System.in para o fluxo de entrada simulado
         ByteArrayInputStream inputStream = new ByteArrayInputStream(simulatedInput.getBytes());
         System.setIn(inputStream);
 
-        // Redireciona System.out para capturar a saída
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
 
         try {
-            // Executa a aplicação
             App app = new App();
             app.run();
 
-            // Verifica se as mensagens esperadas aparecem na saída
             String output = outputStream.toString();
             assertTrue(output.contains("---- CADASTRAR NOVO DESTINO ----"),
                     "O menu para cadastro de novo destino deve ser exibido.");
@@ -110,17 +103,13 @@ public class AppTest {
 
             int codigo = Local.getCodigoAUX() - 1;
             String cod = String.valueOf(codigo);
-            // Carrega o arquivo atualizado
             List<String> updatedLines = loadCsv(originalCsv);
 
-            // Delta esperado com base no local adicionado
             String expectedDelta = String.join(";", cidade, cod, nome, latitude, longitude) + "\n";
 
-            // Verifica se o delta corresponde ao local adicionado
             assertCsvDelta(copiaCsv, originalCsv, expectedDelta);
 
         } finally {
-            // Restaura System.in e System.out
             System.setIn(System.in);
             System.setOut(System.out);
         }
